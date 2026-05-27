@@ -12,10 +12,21 @@
 </head>
 
 <body>
+
   <img 
     src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/GDB%20Productions.png"
     alt="Min bild"
     class="center-image"
+    draggable="false"
   >
+
+  <script>
+    /* blockera högerklick */
+    document.addEventListener("contextmenu", event => event.preventDefault());
+
+    /* blockera drag */
+    document.addEventListener("dragstart", event => event.preventDefault());
+  </script>
+
 </body>
 </html>
