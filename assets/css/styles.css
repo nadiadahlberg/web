@@ -184,9 +184,7 @@ img {
   row-gap: 5rem;
   padding: 4rem 0 5rem;
 
-  background: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/WEBSIDA%20PATTERN.png") repeat;
-  background-size: 120px;
-  background-attachment: fixed;
+  background: url("https://raw.githubusercontent.com/nadiadahlberg/web/main/assets/img/WEBSIDA%20PATTERN.png") repeat;
 }
 .home__data {
   align-self: center;
