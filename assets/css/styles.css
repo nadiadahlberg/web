@@ -486,4 +486,13 @@ img {
   .home__img {
     width: 450px;
   }
+  /* ===== REMOVE WHITE BACKGROUNDS ===== */
+.section,
+.home,
+.about,
+.skills,
+.work,
+.contact {
+  background-color: transparent;
+}
 }
