@@ -18,6 +18,6 @@ body {
 
 /*===== BILD =====*/
 .center-image {
-  width: 220px;
+  display: block;
   height: auto;
 }
