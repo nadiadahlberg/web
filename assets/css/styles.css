@@ -1,58 +1,30 @@
-/*===== BASE =====*/
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 
-  /* ===== BACKGROUND PATTERN ===== */
-  background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
-  background-repeat: repeat;
+  /* shared scaling factor */
+  --scale: clamp(0.6, 1vw, 1);
 
-  /* 🔥 gör pattern responsiv (det du ville ha) */
-  background-size: clamp(40px, 6vw, 120px);
-
-  /* ===== CENTER CONTENT ===== */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  user-select: none;
+  /* bakgrund som “zoomar” */
+  background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+  background-repeat: repeat;
+
+  /* 🔥 viktig: kopplar bakgrund till samma “scale-känsla” */
+  background-size: calc(120px * var(--scale));
 }
 
-/*===== IMAGE =====*/
 .center-image {
-  display: block;
-
-  /* behåller originalstorlek så mycket som möjligt */
-  width: auto;
+  width: calc(400px * var(--scale));
   height: auto;
 
-  /* gör att den inte spräcker skärmen */
-  max-width: 80vw;
-  max-height: 80vh;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  body {
-    background-size: clamp(30px, 8vw, 100px);
-  }
-
-  .center-image {
-    max-width: 90vw;
-  }
-}
-
-/* ===== SMALL MOBILE ===== */
-@media (max-width: 480px) {
-  body {
-    background-size: clamp(25px, 10vw, 80px);
-  }
-
-  .center-image {
-    max-width: 95vw;
-  }
+  display: block;
 }
