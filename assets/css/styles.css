@@ -23,7 +23,7 @@ body {
 .center-image {
   display: block;
 
-  width: 100%;
+  width: 90vw;
   max-width: 700px;
 
   height: auto;
