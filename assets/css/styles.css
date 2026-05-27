@@ -1,206 +1,41 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/*===== VARIABLES CSS =====*/
+/*===== VARIABLES =====*/
 :root {
-  --header-height: 3rem;
-  --font-semi: 600;
-
-  --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
-
+  --first-color: hsl(224, 89%, 60%);
+  --second-color: hsl(224, 56%, 12%);
   --body-font: "Poppins", sans-serif;
-  --big-font-size: 2rem;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
-
-  --mb-2: 1rem;
-  --mb-4: 2rem;
-  --mb-5: 2.5rem;
-  --mb-6: 3rem;
-
-  --z-back: -10;
-  --z-fixed: 100;
 }
 
 /*===== BASE =====*/
-*, ::before, ::after {
+* {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
   color: var(--second-color);
-}
 
-h1, h2, p {
-  margin: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/*===== SECTION =====*/
-.section-title {
-  position: relative;
-  font-size: var(--h2-font-size);
-  color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
-  text-align: center;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  width: 64px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2rem;
-  background-color: var(--first-color);
-}
-
-.section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-
-/*===== LAYOUT =====*/
-.bd-grid {
-  max-width: 1024px;
-  display: grid;
-  margin-left: var(--mb-2);
-  margin-right: var(--mb-2);
-}
-
-.l-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
-}
-
-/*===== NAV =====*/
-.nav {
-  height: var(--header-height);
+  /* 🔥 CENTRERAR INNEHÅLL (bilden) */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  font-weight: var(--font-semi);
-}
 
-.nav__item {
-  margin-bottom: var(--mb-4);
-}
-
-.nav__link {
-  color: #fff;
-}
-
-/*===== HOME =====*/
-.home {
-  position: relative;
-  padding: 4rem 0 5rem;
-
-  /* 👇 PATTERN ENDAST HÄR */
+  /* om du vill ha pattern över hela sidan, flytta hit */
   background: url("https://raw.githubusercontent.com/nadiadahlberg/web/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png") repeat;
-  background-size: 120px;
 }
 
-.home__data {
-  align-self: center;
+/*===== OM DU VILL HA HOME-SEPARAT =====*/
+.home {
+  background: url("https://raw.githubusercontent.com/nadiadahlberg/web/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png") repeat;
+  padding: 4rem;
 }
 
-.home__title {
-  font-size: var(--big-font-size);
-  margin-bottom: var(--mb-5);
-}
-
-.home__title-color {
-  color: var(--first-color);
-}
-
-.home__social {
-  display: flex;
-  flex-direction: column;
-}
-
-.home__social-icon {
-  margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
-  color: var(--second-color);
-}
-
-/*===== BUTTON =====*/
-.button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  border-radius: 0.5rem;
-}
-
-/*===== ABOUT =====*/
-.about__container {
-  text-align: center;
-}
-
-.about__img img {
+/*===== BILD =====*/
+.center-img {
   width: 200px;
-  border-radius: 0.5rem;
-}
-
-/*===== SKILLS =====*/
-.skills__data {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-/*===== WORK =====*/
-.work__img {
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
-/*===== CONTACT =====*/
-.contact__input {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: var(--mb-4);
-}
-
-/*===== FOOTER =====*/
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  background-color: var(--second-color);
-  color: #fff;
+  border-radius: 10px;
 }
