@@ -47,7 +47,7 @@ body {
   margin: 0;
   min-height: 100vh;
 
-  background: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png") repeat;
+  background: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png") no-repeat;
 }
 
 h1, h2, p {
