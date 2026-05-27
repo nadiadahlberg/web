@@ -7,35 +7,52 @@ body {
   margin: 0;
   min-height: 100vh;
 
-  /* pattern bakgrund */
+  /* ===== BACKGROUND PATTERN ===== */
   background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
   background-repeat: repeat;
 
-  /* normal storlek på desktop */
-  background-size: 120px;
+  /* 🔥 gör pattern responsiv (det du ville ha) */
+  background-size: clamp(40px, 6vw, 120px);
 
-  /* centrera innehåll */
+  /* ===== CENTER CONTENT ===== */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* förhindra markering */
   user-select: none;
 }
 
-/*===== BILD =====*/
+/*===== IMAGE =====*/
 .center-image {
   display: block;
+
+  /* behåller originalstorlek så mycket som möjligt */
+  width: auto;
   height: auto;
 
-  /* responsiv bild */
+  /* gör att den inte spräcker skärmen */
   max-width: 80vw;
+  max-height: 80vh;
 }
 
-/*===== MOBIL =====*/
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   body {
-    /* mindre pattern på små skärmar */
-    background-size: 70px;
+    background-size: clamp(30px, 8vw, 100px);
+  }
+
+  .center-image {
+    max-width: 90vw;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+  body {
+    background-size: clamp(25px, 10vw, 80px);
+  }
+
+  .center-image {
+    max-width: 95vw;
   }
 }
