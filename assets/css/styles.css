@@ -23,8 +23,8 @@ body {
 .center-image {
   display: block;
 
-  width: 90vw;
-  max-width: 700px;
-
   height: auto;
+
+  /* följer skärmen men behåller storlek */
+  max-width: 80vw;
 }
