@@ -7,11 +7,14 @@ body {
   margin: 0;
   min-height: 100vh;
 
+  /* ===== MUSPEKARE ===== */
+  cursor: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Muspekare.png"), auto;
+
   /* ===== BACKGROUND PATTERN ===== */
   background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/main/assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
   background-repeat: repeat;
 
-  /* 🔥 gör pattern responsiv (det du ville ha) */
+  /* gör pattern responsiv */
   background-size: clamp(40px, 6vw, 120px);
 
   /* ===== CENTER CONTENT ===== */
@@ -26,11 +29,9 @@ body {
 .center-image {
   display: block;
 
-  /* behåller originalstorlek så mycket som möjligt */
   width: auto;
   height: auto;
 
-  /* gör att den inte spräcker skärmen */
   max-width: 80vw;
   max-height: 80vh;
 }
