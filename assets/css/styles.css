@@ -3,7 +3,7 @@
   box-sizing: border-box;
 
   /* ===== MUSPEKARE PÅ ALLT ===== */
-  cursor: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Muspekare%202.png"), auto !important;
+  cursor: url("../img/Muspekare%202.png"), auto !important;
 }
 
 /* Extra säkerhet för länkar och image maps */
@@ -11,7 +11,7 @@ a,
 area,
 img,
 map {
-  cursor: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Muspekare%202.png"), auto !important;
+  cursor: url("../img/Muspekare%202.png"), auto !important;
 }
 
 body {
