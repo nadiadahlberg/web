@@ -11,7 +11,8 @@
   <style>
     .hero-image {
       width: 100%;
-      height: auto;
+      height: 40vh;
+      object-fit: cover;
       display: block;
     }
   </style>
@@ -25,11 +26,18 @@
   background-position: center;
   background-repeat: no-repeat;
 ">
+  
+<img 
+  src="https://github.com/nadiadahlberg/web/blob/main/assets/img/WEBSHOP%201366X768.png?raw=true"
+  alt="Shop hero"
+  class="hero-image"
+  draggable="false"
+>
 
-  <script>
-    document.addEventListener("contextmenu", event => event.preventDefault());
-    document.addEventListener("dragstart", event => event.preventDefault());
-  </script>
+<script>
+  document.addEventListener("contextmenu", event => event.preventDefault());
+  document.addEventListener("dragstart", event => event.preventDefault());
+</script>
 
 </body>
 </html>
