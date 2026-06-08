@@ -6,7 +6,6 @@
   <title>GDB</title>
 
   <link rel="stylesheet" href="assets/css/styles.css">
-
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
 </head>
 
@@ -18,10 +17,11 @@
   background-size: auto;
   background-position: top left;
 ">
-  
+
 <img 
   src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Startmeny%203.png"
   alt="Min bild"
+  usemap="#startmeny"
   draggable="false"
   style="
     width: 90vw;
@@ -33,10 +33,33 @@
   "
 >
 
-  <script>
-    document.addEventListener("contextmenu", event => event.preventDefault());
-    document.addEventListener("dragstart", event => event.preventDefault());
-  </script>
+<map name="startmeny">
+
+<img src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Startmeny%203.png" usemap="#image-map">
+
+<map name="image-map">
+    <area target="" alt="INFO" title="INFO" href="https://gdbsthlm.com/info" coords="249,150,96,214" shape="rect">
+    <area target="" alt="SHOP" title="SHOP" href="https://gdbsthlm.com/shop" coords="43,414,206,507" shape="rect">
+    <area target="" alt="AUDIO" title="AUDIO" href="https://gdbsthlm.com/audio" coords="372,333,491,363" shape="rect">
+    <area target="" alt="VIDEO" title="VIDEO" href="https://gdbsthlm.com/audio" coords="569,327,684,357" shape="rect">
+    <area target="" alt="PICTURES" title="PICTURES" href="https://gdbsthlm.com/pictures" coords="763,345,937,378" shape="rect">
+    <area target="" alt="CONTACT" title="CONTACT" href="mailto:info@gdbsthlm.com" coords="541,607,980,647" shape="rect">
+</map>
+
+</map>
+
+<script>
+  document.addEventListener("contextmenu", event => event.preventDefault());
+  document.addEventListener("dragstart", event => event.preventDefault());
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+<script>
+  window.onload = function() {
+    imageMapResize();
+  };
+</script>
 
 </body>
 </html>
