@@ -1,12 +1,9 @@
-/*===== BASE =====*/
 * {
   box-sizing: border-box;
 
-  /* ===== MUSPEKARE PÅ ALLT ===== */
   cursor: url("../img/Muspekare%202.png"), auto !important;
 }
 
-/* Extra säkerhet för länkar och image maps */
 a,
 area,
 img,
@@ -14,12 +11,10 @@ map {
   cursor: url("../img/Muspekare%202.png"), auto !important;
 }
 
-/*===== BODY =====*/
 body {
   margin: 0;
   min-height: 100vh;
 
-  /* ===== CENTER CONTENT ===== */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +22,6 @@ body {
   user-select: none;
 }
 
-/*===== IMAGE =====*/
 .center-image {
   display: block;
 
@@ -38,7 +32,6 @@ body {
   max-height: 80vh;
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   body {
     background-size: clamp(30px, 8vw, 100px);
@@ -49,7 +42,6 @@ body {
   }
 }
 
-/* ===== SMALL MOBILE ===== */
 @media (max-width: 480px) {
   body {
     background-size: clamp(25px, 10vw, 80px);
