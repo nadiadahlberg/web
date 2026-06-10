@@ -21,12 +21,12 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 [role="button"]:hover {
-  cursor: url("../img/Hover.png"), pointer;
+  cursor: url("../img/Hover%202.png"), pointer;
 }
 
 /* Image map (viktigt: inget :hover behövs) */
 area {
-  cursor: url("../img/Hover.png"), pointer;
+  cursor: url("../img/Hover%202.png"), pointer;
 }
 
 .center-image {
