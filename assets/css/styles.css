@@ -3,20 +3,6 @@
 }
 
 body {
-  cursor: url("../img/Muspekare%202.png"), auto;
-}
-
-a:hover,
-area:hover,
-img:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
-[role="button"]:hover {
-  cursor: url("../img/Hover.png"), pointer;
-}
-
-body {
   margin: 0;
   min-height: 100vh;
 
@@ -25,6 +11,22 @@ body {
   align-items: center;
 
   user-select: none;
+
+  cursor: url("../img/Muspekare%202.png"), auto;
+}
+
+/* Klickbara element */
+a:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+[role="button"]:hover {
+  cursor: url("../img/Hover.png"), pointer;
+}
+
+/* Image map (viktigt: inget :hover behövs) */
+area {
+  cursor: url("../img/Hover.png"), pointer;
 }
 
 .center-image {
