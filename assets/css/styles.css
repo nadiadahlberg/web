@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
-  cursor: url("../img/Muspekare%202.png"), auto !important;
+}
+
+body {
+  cursor: url("../img/Muspekare%202.png"), auto;
 }
 
 a:hover,
@@ -10,7 +13,7 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 [role="button"]:hover {
-  cursor: url("../img/Hover.png"), pointer !important;
+  cursor: url("../img/Hover.png"), pointer;
 }
 
 body {
