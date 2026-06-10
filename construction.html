@@ -7,6 +7,16 @@
 
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Scroll lock (ingen CSS behövs) -->
+  <script>
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
+    // extra säkerhet (mobil + mus)
+    document.addEventListener("wheel", e => e.preventDefault(), { passive: false });
+    document.addEventListener("touchmove", e => e.preventDefault(), { passive: false });
+  </script>
 </head>
 
 <body style="
