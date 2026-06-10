@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INFO</title>
 
-  <!-- PRELOAD MUSPEKARE (lägg här) -->
   <link rel="preload"
         href="assets/img/Muspekare%202.png"
         as="image">
@@ -24,13 +23,49 @@
   background-repeat: no-repeat;
 ">
 
+<!-- DIN MENYBILD (NU MED USEMAP) -->
 <img 
   src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Infomeny%202.png"
   alt="Min bild"
   class="center-image"
   draggable="false"
-  style="transform: scale(1.4);"
+  usemap="#image-map"
 >
+
+<!-- IMAGE MAP -->
+<map name="image-map">
+
+    <area target="_blank"
+          alt="HOME"
+          href="https://gdbsthlm.com/construction"
+          coords="16,161,115,237"
+          shape="rect">
+
+    <area target="_blank"
+          alt="PICTURES"
+          href="https://gdbsthlm.com/pictures"
+          coords="13,301,112,377"
+          shape="rect">
+
+    <area target="_blank"
+          alt="AUDIO"
+          href="https://gdbsthlm.com/audio"
+          coords="7,449,110,528"
+          shape="rect">
+
+    <area target="_blank"
+          alt="VIDEO"
+          href="https://gdbsthlm.com/video"
+          coords="8,606,112,686"
+          shape="rect">
+
+    <area target="_blank"
+          alt="EMAIL"
+          href="mailto:info@gdbsthlm.com"
+          coords="354,435,1024,577"
+          shape="rect">
+
+</map>
 
 <script>
   document.addEventListener("contextmenu", event => event.preventDefault());
