@@ -73,7 +73,13 @@
 
 </map>
 
+<!-- FIX: gör image map responsiv -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
 <script>
+  window.addEventListener("load", function () {
+    imageMapResize();
+  });
+
   document.addEventListener("contextmenu", event => event.preventDefault());
   document.addEventListener("dragstart", event => event.preventDefault());
 </script>
