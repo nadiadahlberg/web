@@ -6,23 +6,34 @@
   <title>PICTURES</title>
 
   <link rel="stylesheet" href="assets/css/styles.css">
-
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      overflow: hidden;
+    }
+
+    img {
+      user-select: none;
+    }
+  </style>
 </head>
 
-<body style="
-  margin: 0;
-  min-height: 100vh;
-  background-image: url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-">
+<body>
 
-  <img
+<!-- IMAGE -->
+<img
   src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/pichome.png"
   alt="Min bild"
   draggable="false"
+  usemap="#image-map"
   style="
     width: 80vw;
     height: auto;
@@ -33,10 +44,26 @@
   "
 >
 
-  <script>
-    document.addEventListener("contextmenu", event => event.preventDefault());
-    document.addEventListener("dragstart", event => event.preventDefault());
-  </script>
-  
+<!-- IMAGE MAP -->
+<map name="image-map">
+  <area
+    alt="Construction"
+    title="Construction"
+    href="https://gdbsthlm.com/construction"
+    coords="1186,639,113"
+    shape="circle">
+</map>
+
+<!-- FIX: responsive image map -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    imageMapResize();
+  });
+
+  document.addEventListener("contextmenu", event => event.preventDefault());
+  document.addEventListener("dragstart", event => event.preventDefault());
+</script>
+
 </body>
 </html>
