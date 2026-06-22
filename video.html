@@ -24,7 +24,7 @@
       justify-content: center;
       align-items: center;
 
-background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEBG.jpg?v=2");
+      background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEBG.jpg?v=2");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -32,15 +32,18 @@ background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/
 
     img {
       user-select: none;
+      display: block;
     }
   </style>
 </head>
 
 <body>
+
 <img
   src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEOMENY.png"
   alt="VIDEO"
   draggable="false"
+  usemap="#image-map"
   style="
     width: 80vw;
     height: auto;
@@ -50,6 +53,22 @@ background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/
     transform: translate(-50%, -50%);
   "
 >
+
+<map name="image-map">
+  <area target="_blank"
+        alt="Construction"
+        href="https://gdbsthlm.com/construction"
+        coords="175,197,107"
+        shape="circle">
+</map>
+
+<!-- IMAGE MAP RESIZER -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+  window.addEventListener("load", function () {
+    imageMapResize();
+  });
+</script>
 
 </body>
 </html>
