@@ -19,22 +19,27 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
-      background-color: #ffffff; /* Vit bakgrund */
+      background-color: #ffffff;
 
-      /* Centrerar innehållet */
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    img {
+      user-select: none;
     }
   </style>
 </head>
 
 <body>
 
+<!-- Bilden -->
 <img
   src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/AUDIO.png"
-  alt="Min bild"
+  alt="AUDIO"
   draggable="false"
+  usemap="#image-map"
   style="
     width: 80vw;
     height: auto;
@@ -45,10 +50,33 @@
   "
 >
 
-  <script>
-    document.addEventListener("contextmenu", event => event.preventDefault());
-    document.addEventListener("dragstart", event => event.preventDefault());
-  </script>
+<!-- Image map -->
+<map name="image-map">
+
+    <area
+      alt="Spotify"
+      href="https://open.spotify.com/artist/0AlxN7pmgboll3smvAphdV"
+      coords="332,441,480,484"
+      shape="rect">
+
+    <area
+      alt="Bandcamp"
+      href="https://djcrime.bandcamp.com/"
+      coords="843,452,1046,498"
+      shape="rect">
+
+    <area
+      alt="HOME"
+      href="https://gdbsthlm.com/construction"
+      coords="689,673,78"
+      shape="circle">
+
+</map>
+
+<script>
+  document.addEventListener("contextmenu", event => event.preventDefault());
+  document.addEventListener("dragstart", event => event.preventDefault());
+</script>
 
 </body>
 </html>
