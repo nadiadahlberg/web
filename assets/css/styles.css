@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+
+/* =================================
+   GEMENSAM CSS - ALLA SIDOR
+   ================================= */
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -15,21 +20,33 @@ body {
   cursor: url("../img/Muspekare%202.png"), auto;
 }
 
+
 /* Klickbara element */
+
 a:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 [role="button"]:hover {
+
   cursor: url("../img/Hover.png"), pointer;
+
 }
 
-/* Image map (viktigt: inget :hover behövs) */
+
+/* Image map */
+
 area {
+
   cursor: url("../img/Hover.png"), pointer;
+
 }
+
+
+/* Standardbilder på andra sidor */
 
 .center-image {
+
   display: block;
 
   width: auto;
@@ -37,24 +54,86 @@ area {
 
   max-width: 80vw;
   max-height: 80vh;
+
 }
+
+
+/* =================================
+   MOBIL - ÖVRIGA SIDOR
+   ================================= */
 
 @media (max-width: 768px) {
+
   body {
+
     background-size: clamp(30px, 8vw, 100px);
+
   }
 
+
   .center-image {
+
     max-width: 90vw;
+
   }
+
 }
 
+
+
 @media (max-width: 480px) {
+
   body {
+
     background-size: clamp(25px, 10vw, 80px);
+
   }
 
+
   .center-image {
+
     max-width: 95vw;
+
   }
+
+}
+
+
+
+
+/* =================================
+   GDB STARTSIDA (ENDAST index.html)
+   ================================= */
+
+
+.start-page {
+
+  overflow: hidden;
+
+  background-image: url("../img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+
+  background-repeat: repeat;
+
+  background-position: top left;
+
+}
+
+
+/*
+   Gör endast startsidans PNG större.
+   Övriga sidor påverkas inte.
+*/
+
+.start-page .center-image {
+
+  width: 88vw;
+
+  height: auto;
+
+  max-width: none;
+
+  max-height: none;
+
+  display: block;
+
 }
