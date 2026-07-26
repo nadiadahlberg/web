@@ -1,88 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AUDIO</title>
 
-  <link rel="preload"
-        href="assets/img/Muspekare%202.png"
-        as="image">
+<meta charset="UTF-8">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+<title>AUDIO</title>
 
-  <style>
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #ffffff;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+<link rel="preload"
+      href="assets/img/Muspekare%202.png"
+      as="image">
 
-    img {
-      user-select: none;
-    }
-  </style>
+
+<link rel="stylesheet" href="assets/css/styles.css">
+
+
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+
+<style>
+
+html,
+body {
+
+  margin:0;
+
+  width:100%;
+  height:100%;
+
+  overflow:hidden;
+
+  background-color:#ffffff;
+
+}
+
+
+.audio-page {
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+
+
+.audio-image {
+
+  width:80vw;
+
+  height:auto;
+
+  display:block;
+
+  user-select:none;
+
+  -webkit-user-drag:none;
+
+}
+
+
+</style>
+
+
 </head>
 
-<body>
 
-<!-- Bilden -->
+<body class="audio-page">
+
+
 <img
-  src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/AUDIO.png"
-  alt="AUDIO"
-  draggable="false"
-  usemap="#image-map"
-  style="
-    width: 80vw;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  "
+
+class="audio-image"
+
+src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/AUDIO.png"
+
+alt="AUDIO"
+
+draggable="false"
+
+usemap="#image-map"
+
 >
 
-<!-- Image map -->
+
+
 <map name="image-map">
 
-    <area
-      alt="Spotify"
-      href="https://open.spotify.com/artist/0AlxN7pmgboll3smvAphdV"
-      coords="332,441,480,484"
-      shape="rect">
 
-    <area
-      alt="Bandcamp"
-      href="https://djcrime.bandcamp.com/"
-      coords="843,452,1046,498"
-      shape="rect">
+<area
 
-    <area
-      alt="HOME"
-      href="https://gdbsthlm.com/construction"
-      coords="689,673,78"
-      shape="circle">
+alt="Spotify"
+
+href="https://open.spotify.com/artist/0AlxN7pmgboll3smvAphdV"
+
+coords="332,441,480,484"
+
+shape="rect">
+
+
+
+<area
+
+alt="Bandcamp"
+
+href="https://djcrime.bandcamp.com/"
+
+coords="843,452,1046,498"
+
+shape="rect">
+
+
+
+<area
+
+alt="HOME"
+
+href="https://gdbsthlm.com/construction"
+
+coords="689,673,78"
+
+shape="circle">
+
 
 </map>
 
-<!-- FIX: gör image map responsiv -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-<script>
-  window.addEventListener("load", function () {
-    imageMapResize();
-  });
 
-  document.addEventListener("contextmenu", event => event.preventDefault());
-  document.addEventListener("dragstart", event => event.preventDefault());
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+
+<script>
+
+window.addEventListener("load", function(){
+
+  imageMapResize();
+
+});
+
+
+document.addEventListener(
+"contextmenu",
+event => event.preventDefault()
+);
+
+
+document.addEventListener(
+"dragstart",
+event => event.preventDefault()
+);
+
+
 </script>
 
+
 </body>
+
 </html>
