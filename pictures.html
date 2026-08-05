@@ -1,69 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PICTURES</title>
 
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background-image: url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      overflow: hidden;
-    }
+<title>PICTURES</title>
 
-    img {
-      user-select: none;
-    }
-  </style>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+
+<style>
+
+
+body {
+
+  margin: 0;
+  min-height: 100vh;
+
+  background-image: url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+
+}
+
+
+
+img {
+
+  user-select: none;
+
+}
+
+
+
+/* TOP IMAGE */
+
+.header-image {
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 40px;
+  margin-bottom: 60px;
+
+}
+
+
+
+.header-image img {
+
+  width: 80vw;
+  max-width: 1000px;
+
+  height: auto;
+
+}
+
+
+
+/* GALLERY */
+
+.gallery {
+
+  column-count: 4;
+  column-gap: 20px;
+
+  padding: 0 8vw 80px;
+
+}
+
+
+
+.image {
+
+  break-inside: avoid;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.image img {
+
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width:900px){
+
+  .gallery {
+
+    column-count: 3;
+
+  }
+
+}
+
+
+
+@media screen and (max-width:600px){
+
+  .gallery {
+
+    column-count: 2;
+
+  }
+
+}
+
+
+
+@media screen and (max-width:400px){
+
+  .gallery {
+
+    column-count: 1;
+
+  }
+
+}
+
+
+</style>
+
+
 </head>
+
+
 
 <body>
 
-<!-- IMAGE -->
+
+
+<!-- TOP IMAGE -->
+
+<div class="header-image">
+
 <img
-  src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/pichome.png"
-  alt="Min bild"
-  draggable="false"
-  usemap="#image-map"
-  style="
-    width: 80vw;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  "
+
+src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/pichome.png"
+
+alt="Pictures"
+
+draggable="false"
+
+usemap="#image-map"
+
 >
 
+</div>
+
+
+
+
+
 <!-- IMAGE MAP -->
+
 <map name="image-map">
-  <area
-    alt="Construction"
-    title="Construction"
-    href="https://gdbsthlm.com/construction"
-    coords="1186,639,113"
-    shape="circle">
+
+
+<area
+
+alt="Construction"
+
+title="Construction"
+
+href="https://gdbsthlm.com/construction"
+
+coords="1186,639,113"
+
+shape="circle">
+
+
 </map>
 
-<!-- FIX: responsive image map -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-<script>
-  window.addEventListener("load", function () {
-    imageMapResize();
-  });
 
-  document.addEventListener("contextmenu", event => event.preventDefault());
-  document.addEventListener("dragstart", event => event.preventDefault());
+
+
+
+
+<!-- IMAGE GALLERY -->
+
+
+<section class="gallery">
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+<div class="image">
+
+<img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- IMAGE MAP RESIZER -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+
+<script>
+
+
+window.addEventListener("load", function(){
+
+  imageMapResize();
+
+});
+
+
+
+document.addEventListener("contextmenu", event => event.preventDefault());
+
+document.addEventListener("dragstart", event => event.preventDefault());
+
+
 </script>
 
+
+
 </body>
+
 </html>
