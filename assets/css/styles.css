@@ -1,26 +1,30 @@
-* {
+/* =================================
+   RESET
+   ================================= */
+
+*,
+*::before,
+*::after {
 
 box-sizing:border-box;
+
+margin:0;
+
+padding:0;
 
 }
 
 
+
+
 /* =================================
-   GEMENSAM CSS - ALLA SIDOR
+   GEMENSAM CSS
    ================================= */
 
 
 body {
 
-margin:0;
-
 min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
 
 user-select:none;
 
@@ -34,7 +38,10 @@ img {
 
 user-select:none;
 
+display:block;
+
 }
+
 
 
 
@@ -55,10 +62,6 @@ cursor:url("../img/Hover.png"), pointer;
 
 
 
-
-/* Image map */
-
-
 area {
 
 cursor:url("../img/Hover.png"), pointer;
@@ -69,13 +72,15 @@ cursor:url("../img/Hover.png"), pointer;
 
 
 
-/* Standardbilder andra sidor */
+
+
+/* =================================
+   STANDARD IMAGE
+   ================================= */
 
 
 .center-image {
 
-
-display:block;
 
 width:auto;
 
@@ -93,76 +98,21 @@ max-height:80vh;
 
 
 
-/* =================================
-   MOBIL - ÖVRIGA SIDOR
-   ================================= */
-
-
-@media(max-width:768px){
-
-
-body {
-
-
-background-size:clamp(30px,8vw,100px);
-
-
-}
-
-
-
-.center-image {
-
-
-max-width:90vw;
-
-
-}
-
-
-}
-
-
-
-
-
-@media(max-width:480px){
-
-
-body {
-
-
-background-size:clamp(25px,10vw,80px);
-
-
-}
-
-
-
-.center-image {
-
-
-max-width:95vw;
-
-
-}
-
-
-}
-
-
-
-
-
-
 
 
 /* =================================
-   GDB STARTSIDA
+   STARTSIDA
    ================================= */
 
 
 .start-page {
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
 
 
 overflow:hidden;
@@ -188,19 +138,14 @@ background-position:top left;
 width:88vw;
 
 
-height:auto;
-
-
 max-width:none;
 
 
 max-height:none;
 
 
-display:block;
-
-
 }
+
 
 
 
@@ -227,7 +172,8 @@ min-height:100vh;
 overflow-x:hidden;
 
 
-background-image:url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png');
+
+background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png");
 
 
 background-size:cover;
@@ -247,8 +193,7 @@ background-attachment:fixed;
 
 
 
-
-/* TOP IMAGE */
+/* PICTURES TOP IMAGE */
 
 
 .pictures-page .header-image {
@@ -276,11 +221,15 @@ margin-bottom:60px;
 
 .pictures-page .header-image img {
 
+
 width:90vw;
+
 
 max-width:1200px;
 
+
 height:auto;
+
 
 }
 
@@ -288,10 +237,7 @@ height:auto;
 
 
 
-
-
-
-/* GALLERY */
+/* PICTURES GALLERY */
 
 
 .pictures-page .gallery {
@@ -310,7 +256,6 @@ padding:0 8vw 80px;
 
 
 
-
 .pictures-page .image {
 
 
@@ -324,7 +269,6 @@ margin-bottom:20px;
 
 
 
-
 .pictures-page .image img {
 
 
@@ -332,9 +276,6 @@ width:100%;
 
 
 height:auto;
-
-
-display:block;
 
 
 }
@@ -346,7 +287,157 @@ display:block;
 
 
 
-/* RESPONSIVE GALLERY */
+
+/* =================================
+   VIDEO PAGE
+   ================================= */
+
+
+.video-page {
+
+
+display:block;
+
+
+min-height:100vh;
+
+
+overflow-x:hidden;
+
+
+
+background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEBG.jpg?v=2");
+
+
+background-size:cover;
+
+
+background-position:center;
+
+
+background-repeat:no-repeat;
+
+
+background-attachment:fixed;
+
+
+}
+
+
+
+
+
+
+/* VIDEO TOP IMAGE */
+
+
+.video-page .video-header {
+
+
+width:100%;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+margin-top:40px;
+
+
+margin-bottom:60px;
+
+
+}
+
+
+
+
+.video-page .video-header img {
+
+
+width:90vw;
+
+
+max-width:1200px;
+
+
+height:auto;
+
+
+}
+
+
+
+
+
+
+
+/* YOUTUBE VIDEOS */
+
+
+.video-page .videos {
+
+
+display:grid;
+
+
+grid-template-columns:repeat(3,1fr);
+
+
+gap:30px;
+
+
+padding:0 5vw 80px;
+
+
+}
+
+
+
+
+.video-page .video {
+
+
+aspect-ratio:16 / 9;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+
+
+.video-page iframe {
+
+
+width:100%;
+
+
+height:100%;
+
+
+border:0;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =================================
+   RESPONSIVE
+   ================================= */
+
 
 
 @media(max-width:900px){
@@ -361,7 +452,18 @@ column-count:3;
 }
 
 
+
+.video-page .videos {
+
+
+grid-template-columns:repeat(2,1fr);
+
+
 }
+
+
+}
+
 
 
 
@@ -379,7 +481,18 @@ column-count:2;
 }
 
 
+
+.video-page .videos {
+
+
+grid-template-columns:1fr;
+
+
 }
+
+
+}
+
 
 
 
