@@ -1,74 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VIDEO</title>
 
-  <link rel="preload"
-        href="assets/img/Muspekare%202.png"
-        as="image">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+<title>VIDEO</title>
 
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="assets/css/styles.css">
 
-  <style>
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background-image: url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEBG.jpg?v=2");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    img {
-      user-select: none;
-      display: block;
-    }
-  </style>
 </head>
 
-<body>
+
+
+<body class="video-page">
+
+
+
+<!-- TOP IMAGE -->
+
+<div class="video-header">
 
 <img
-  src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEOMENY.png"
-  alt="VIDEO"
-  draggable="false"
-  usemap="#image-map"
-  style="
-    width: 80vw;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  "
+
+src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEOMENY.png"
+
+alt="VIDEO"
+
+draggable="false"
+
+usemap="#image-map"
+
 >
 
+</div>
+
+
+
+
+
+<!-- IMAGE MAP -->
+
+
 <map name="image-map">
-  <area
-        alt="Construction"
-        href="https://gdbsthlm.com/construction"
-        coords="175,197,107"
-        shape="circle">
+
+
+<area
+
+alt="Construction"
+
+title="Construction"
+
+href="https://gdbsthlm.com/construction"
+
+coords="175,197,107"
+
+shape="circle">
+
+
 </map>
 
+
+
+
+
+
+
+<!-- VIDEOS -->
+
+
+<section class="videos">
+
+
+
+<div class="video">
+
+<iframe
+
+src="https://www.youtube.com/embed/YOUTUBE_ID_1"
+
+title="YouTube video"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+
+
+
+<div class="video">
+
+<iframe
+
+src="https://www.youtube.com/embed/YOUTUBE_ID_2"
+
+title="YouTube video"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+
+
+
+<div class="video">
+
+<iframe
+
+src="https://www.youtube.com/embed/YOUTUBE_ID_3"
+
+title="YouTube video"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
 <!-- IMAGE MAP RESIZER -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResize.min.js"></script>
+
+
 <script>
-  window.addEventListener("load", function () {
-    imageMapResize();
-  });
+
+
+window.addEventListener("load", function(){
+
+imageMapResize();
+
+});
+
+
+
+document.addEventListener("contextmenu", event => event.preventDefault());
+
+document.addEventListener("dragstart", event => event.preventDefault());
+
+
 </script>
 
+
+
 </body>
+
 </html>
