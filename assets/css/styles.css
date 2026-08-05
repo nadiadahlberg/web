@@ -1,6 +1,8 @@
-/* =================================
-   RESET
-   ================================= */
+/*
+=================================
+RESET
+=================================
+*/
 
 *,
 *::before,
@@ -17,9 +19,12 @@ padding:0;
 
 
 
-/* =================================
-   GEMENSAM CSS
-   ================================= */
+
+/*
+=================================
+GEMENSAM CSS - ALLA SIDOR
+=================================
+*/
 
 
 body {
@@ -36,17 +41,15 @@ cursor:url("../img/Muspekare%202.png"), auto;
 
 img {
 
-user-select:none;
-
 display:block;
+
+user-select:none;
 
 }
 
 
 
-
 /* Klickbara element */
-
 
 a:hover,
 button:hover,
@@ -54,13 +57,13 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 [role="button"]:hover {
 
-
 cursor:url("../img/Hover.png"), pointer;
-
 
 }
 
 
+
+/* Image map */
 
 area {
 
@@ -73,14 +76,16 @@ cursor:url("../img/Hover.png"), pointer;
 
 
 
-
-/* =================================
-   STANDARD IMAGE
-   ================================= */
+/*
+=================================
+STANDARD IMAGE
+=================================
+*/
 
 
 .center-image {
 
+display:block;
 
 width:auto;
 
@@ -90,6 +95,51 @@ max-width:80vw;
 
 max-height:80vh;
 
+}
+
+
+
+
+
+
+
+
+/*
+=================================
+STARTSIDA
+=================================
+*/
+
+
+.start-page {
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+
+background-image:url("../img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+
+background-repeat:repeat;
+
+background-position:top left;
+
+}
+
+
+
+
+.start-page .center-image {
+
+width:88vw;
+
+max-width:none;
+
+max-height:none;
 
 }
 
@@ -100,12 +150,242 @@ max-height:80vh;
 
 
 
-/* =================================
-   STARTSIDA
-   ================================= */
+
+/*
+=================================
+PICTURES PAGE
+=================================
+*/
 
 
-.start-page {
+.pictures-page {
+
+display:block;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+
+background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
+}
+
+
+
+
+/* TOP IMAGE */
+
+
+.pictures-page .header-image {
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+margin-top:40px;
+
+margin-bottom:60px;
+
+}
+
+
+
+
+.pictures-page .header-image img {
+
+width:90vw;
+
+max-width:1200px;
+
+height:auto;
+
+}
+
+
+
+
+
+
+/* GALLERY */
+
+
+.pictures-page .gallery {
+
+column-count:4;
+
+column-gap:20px;
+
+padding:0 8vw 80px;
+
+}
+
+
+
+.pictures-page .image {
+
+break-inside:avoid;
+
+margin-bottom:20px;
+
+}
+
+
+
+.pictures-page .image img {
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+}
+
+
+
+
+
+
+
+
+/*
+=================================
+VIDEO PAGE
+=================================
+*/
+
+
+.video-page {
+
+display:block;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+
+background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEBG.jpg?v=2");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
+}
+
+
+
+
+
+.video-page .video-header {
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+margin-top:40px;
+
+margin-bottom:60px;
+
+}
+
+
+
+
+
+.video-page .video-header img {
+
+width:90vw;
+
+max-width:1200px;
+
+height:auto;
+
+}
+
+
+
+
+
+/* YOUTUBE */
+
+
+.video-page .videos {
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+padding:0 5vw 80px;
+
+}
+
+
+
+
+.video-page .video {
+
+aspect-ratio:16 / 9;
+
+overflow:hidden;
+
+}
+
+
+
+
+.video-page iframe {
+
+width:100%;
+
+height:100%;
+
+border:0;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*
+=================================
+LIGHTBOX
+=================================
+*/
+
+
+.lightbox {
+
+position:fixed;
+
+inset:0;
+
+
+background:rgba(0,0,0,.9);
 
 
 display:flex;
@@ -115,121 +395,29 @@ justify-content:center;
 align-items:center;
 
 
-overflow:hidden;
+opacity:0;
+
+visibility:hidden;
 
 
-background-image:url("../img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+transition:opacity .25s ease;
 
 
-background-repeat:repeat;
+z-index:9999;
 
 
-background-position:top left;
-
-
-}
-
-
-
-
-.start-page .center-image {
-
-
-width:88vw;
-
-
-max-width:none;
-
-
-max-height:none;
-
+cursor:url("../img/Hover.png"), pointer;
 
 }
 
 
 
 
+.lightbox.active {
 
+opacity:1;
 
-
-
-
-
-/* =================================
-   PICTURES PAGE
-   ================================= */
-
-
-.pictures-page {
-
-
-display:block;
-
-
-min-height:100vh;
-
-
-overflow-x:hidden;
-
-
-
-background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png");
-
-
-background-size:cover;
-
-
-background-position:center;
-
-
-background-repeat:no-repeat;
-
-
-background-attachment:fixed;
-
-
-}
-
-
-
-
-/* PICTURES TOP IMAGE */
-
-
-.pictures-page .header-image {
-
-
-width:100%;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-margin-top:40px;
-
-
-margin-bottom:60px;
-
-
-}
-
-
-
-
-.pictures-page .header-image img {
-
-
-width:90vw;
-
-
-max-width:1200px;
-
-
-height:auto;
-
+visibility:visible;
 
 }
 
@@ -237,46 +425,62 @@ height:auto;
 
 
 
-/* PICTURES GALLERY */
+.lightbox img {
+
+max-width:90vw;
+
+max-height:90vh;
 
 
-.pictures-page .gallery {
+object-fit:contain;
 
 
-column-count:4;
+transform:scale(.9);
 
 
-column-gap:20px;
+transition:transform .25s ease;
 
 
-padding:0 8vw 80px;
+box-shadow:0 0 40px rgba(0,0,0,.5);
 
 
-}
-
-
-
-.pictures-page .image {
-
-
-break-inside:avoid;
-
-
-margin-bottom:20px;
-
+cursor:default;
 
 }
 
 
 
-.pictures-page .image img {
+
+.lightbox.active img {
+
+transform:scale(1);
+
+}
 
 
-width:100%;
 
 
-height:auto;
 
+
+
+/* GALLERI HOVER */
+
+
+.pictures-page .gallery img {
+
+cursor:url("../img/Hover.png"), pointer;
+
+
+transition:transform .2s ease;
+
+}
+
+
+
+
+.pictures-page .gallery img:hover {
+
+transform:scale(1.03);
 
 }
 
@@ -287,157 +491,11 @@ height:auto;
 
 
 
-
-/* =================================
-   VIDEO PAGE
-   ================================= */
-
-
-.video-page {
-
-
-display:block;
-
-
-min-height:100vh;
-
-
-overflow-x:hidden;
-
-
-
-background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEBG.jpg?v=2");
-
-
-background-size:cover;
-
-
-background-position:center;
-
-
-background-repeat:no-repeat;
-
-
-background-attachment:fixed;
-
-
-}
-
-
-
-
-
-
-/* VIDEO TOP IMAGE */
-
-
-.video-page .video-header {
-
-
-width:100%;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-margin-top:40px;
-
-
-margin-bottom:60px;
-
-
-}
-
-
-
-
-.video-page .video-header img {
-
-
-width:90vw;
-
-
-max-width:1200px;
-
-
-height:auto;
-
-
-}
-
-
-
-
-
-
-
-/* YOUTUBE VIDEOS */
-
-
-.video-page .videos {
-
-
-display:grid;
-
-
-grid-template-columns:repeat(3,1fr);
-
-
-gap:30px;
-
-
-padding:0 5vw 80px;
-
-
-}
-
-
-
-
-.video-page .video {
-
-
-aspect-ratio:16 / 9;
-
-
-overflow:hidden;
-
-
-}
-
-
-
-
-
-.video-page iframe {
-
-
-width:100%;
-
-
-height:100%;
-
-
-border:0;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =================================
-   RESPONSIVE
-   ================================= */
-
+/*
+=================================
+RESPONSIVE
+=================================
+*/
 
 
 @media(max-width:900px){
@@ -445,9 +503,7 @@ border:0;
 
 .pictures-page .gallery {
 
-
 column-count:3;
-
 
 }
 
@@ -455,9 +511,7 @@ column-count:3;
 
 .video-page .videos {
 
-
 grid-template-columns:repeat(2,1fr);
-
 
 }
 
@@ -474,9 +528,7 @@ grid-template-columns:repeat(2,1fr);
 
 .pictures-page .gallery {
 
-
 column-count:2;
-
 
 }
 
@@ -484,9 +536,7 @@ column-count:2;
 
 .video-page .videos {
 
-
 grid-template-columns:1fr;
-
 
 }
 
@@ -503,9 +553,7 @@ grid-template-columns:1fr;
 
 .pictures-page .gallery {
 
-
 column-count:1;
-
 
 }
 
