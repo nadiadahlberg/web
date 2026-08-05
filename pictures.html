@@ -9,23 +9,37 @@
 <title>PICTURES</title>
 
 <link rel="stylesheet" href="assets/css/styles.css">
+
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
 </head>
 
+
 <body class="pictures-page">
+
+
 
 <!-- TOP IMAGE -->
 
 <div class="header-image">
 
 <img
+
 src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/pichome.png"
+
 alt="Pictures"
+
 draggable="false"
-usemap="#image-map">
+
+usemap="#image-map"
+
+>
 
 </div>
+
+
+
+
 
 
 
@@ -33,12 +47,19 @@ usemap="#image-map">
 
 <map name="image-map">
 
+
 <area
+
 alt="Construction"
+
 title="Construction"
+
 href="https://gdbsthlm.com/construction"
+
 coords="1186,639,113"
+
 shape="circle">
+
 
 </map>
 
@@ -46,52 +67,87 @@ shape="circle">
 
 
 
+
+
+
 <!-- GALLERY -->
+
 
 <section class="gallery">
 
 
+
 <div class="image">
+
 <img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
 </div>
 
 
+
 <div class="image">
+
 <img src="https://cdn.pixabay.com/photo/2020/02/10/11/09/smiley-4836178_1280.png" alt="Picture">
+
 </div>
 
 
+
 <div class="image">
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwrj6DCUL6L0gQ6P1b3WWPqla_QdJsx5tn7XqQYH4Cbw&s=10" alt="Picture">
+
 </div>
 
 
+
 <div class="image">
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ_4-zk6S7e6-dYHSfXwh1Ok62ewVJG0Y-E81vvcMpXA&s=10" alt="Picture">
+
 </div>
 
 
+
 <div class="image">
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmLWQC04yKUZ8ffpyukumcnxL6N4ZKbsboVLW0vI0vkA&s=10" alt="Picture">
+
 </div>
 
 
+
 <div class="image">
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUHLRZfGv3o3QbjO7-ExOIa6smY5G_smNYw-Zt6WK6Wg&s=10" alt="Picture">
+
 </div>
 
 
+
 <div class="image">
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ_4-zk6S7e6-dYHSfXwh1Ok62ewVJG0Y-E81vvcMpXA&s=10" alt="Picture">
+
 </div>
+
 
 
 <div class="image">
+
 <img src="https://static.posters.cz/image/1300/8692.jpg" alt="Picture">
+
 </div>
+
 
 
 </section>
+
+
+
+
+
+
 
 
 
@@ -99,7 +155,18 @@ shape="circle">
 
 <div id="lightbox" class="lightbox">
 
-<img id="lightbox-img" src="" alt="">
+
+<img
+
+id="lightbox-img"
+
+src=""
+
+alt="Expanded picture"
+
+
+>
+
 
 </div>
 
@@ -107,27 +174,46 @@ shape="circle">
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+
+
+<!-- IMAGE MAP RESIZER -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResize.min.js"></script>
+
 
 <script>
 
+
 window.addEventListener("load", function(){
 
+
 imageMapResize();
+
 
 });
 
 
+
 document.addEventListener("contextmenu", event => event.preventDefault());
 
+
 document.addEventListener("dragstart", event => event.preventDefault());
+
 
 </script>
 
 
-<!-- LIGHTBOX JS -->
 
-<script src="assets/js/pictures.js"></script>
+
+
+
+<!-- MAIN JS -->
+
+<script src="assets/js/main.js"></script>
+
+
 
 </body>
 
