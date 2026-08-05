@@ -13,10 +13,7 @@
 
 </head>
 
-
 <body class="pictures-page">
-
-
 
 <!-- TOP IMAGE -->
 
@@ -26,11 +23,9 @@
 src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/pichome.png"
 alt="Pictures"
 draggable="false"
-usemap="#image-map"
->
+usemap="#image-map">
 
 </div>
-
 
 
 
@@ -46,7 +41,6 @@ coords="1186,639,113"
 shape="circle">
 
 </map>
-
 
 
 
@@ -101,12 +95,19 @@ shape="circle">
 
 
 
+<!-- LIGHTBOX -->
+
+<div id="lightbox" class="lightbox">
+
+<img id="lightbox-img" src="" alt="">
+
+</div>
+
 
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
-
 
 <script>
 
@@ -121,10 +122,12 @@ document.addEventListener("contextmenu", event => event.preventDefault());
 
 document.addEventListener("dragstart", event => event.preventDefault());
 
-
 </script>
 
 
+<!-- LIGHTBOX JS -->
+
+<script src="assets/js/pictures.js"></script>
 
 </body>
 
