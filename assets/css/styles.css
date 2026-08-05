@@ -794,11 +794,21 @@ object-fit:contain;
 
 .product-info {
 
-
 max-width:400px;
 
+padding:40px;
 
 font-family:"Comic Sans MS", "Comic Sans", cursive;
+
+
+/* PNG bakom texten */
+background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/SHOP%20PRODUKTBESKRIVNING.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
 
 
 }
