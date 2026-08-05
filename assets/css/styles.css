@@ -692,3 +692,17 @@ column-count:1;
 
 
 }
+
+/*
+=================================
+SHOP FONT
+=================================
+*/
+
+.shop-page .product h2,
+.shop-page .product p,
+.shop-page .product a {
+
+font-family:"Comic Sans MS", "Comic Sans", cursive;
+
+}
