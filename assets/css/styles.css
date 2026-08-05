@@ -1,5 +1,7 @@
 * {
-  box-sizing: border-box;
+
+box-sizing:border-box;
+
 }
 
 
@@ -7,21 +9,37 @@
    GEMENSAM CSS - ALLA SIDOR
    ================================= */
 
+
 body {
-  margin: 0;
-  min-height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+margin:0;
 
-  user-select: none;
+min-height:100vh;
 
-  cursor: url("../img/Muspekare%202.png"), auto;
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+user-select:none;
+
+cursor:url("../img/Muspekare%202.png"), auto;
+
 }
 
 
+
+img {
+
+user-select:none;
+
+}
+
+
+
 /* Klickbara element */
+
 
 a:hover,
 button:hover,
@@ -29,111 +47,358 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 [role="button"]:hover {
 
-  cursor: url("../img/Hover.png"), pointer;
+
+cursor:url("../img/Hover.png"), pointer;
+
 
 }
+
+
 
 
 /* Image map */
 
+
 area {
 
-  cursor: url("../img/Hover.png"), pointer;
+cursor:url("../img/Hover.png"), pointer;
 
 }
 
 
-/* Standardbilder på andra sidor */
+
+
+
+/* Standardbilder andra sidor */
+
 
 .center-image {
 
-  display: block;
 
-  width: auto;
-  height: auto;
+display:block;
 
-  max-width: 80vw;
-  max-height: 80vh;
+width:auto;
+
+height:auto;
+
+max-width:80vw;
+
+max-height:80vh;
+
 
 }
+
+
+
+
 
 
 /* =================================
    MOBIL - ÖVRIGA SIDOR
    ================================= */
 
-@media (max-width: 768px) {
 
-  body {
-
-    background-size: clamp(30px, 8vw, 100px);
-
-  }
+@media(max-width:768px){
 
 
-  .center-image {
+body {
 
-    max-width: 90vw;
 
-  }
+background-size:clamp(30px,8vw,100px);
+
 
 }
 
 
 
-@media (max-width: 480px) {
-
-  body {
-
-    background-size: clamp(25px, 10vw, 80px);
-
-  }
+.center-image {
 
 
-  .center-image {
+max-width:90vw;
 
-    max-width: 95vw;
-
-  }
 
 }
+
+
+}
+
+
+
+
+
+@media(max-width:480px){
+
+
+body {
+
+
+background-size:clamp(25px,10vw,80px);
+
+
+}
+
+
+
+.center-image {
+
+
+max-width:95vw;
+
+
+}
+
+
+}
+
+
+
+
 
 
 
 
 /* =================================
-   GDB STARTSIDA (ENDAST index.html)
+   GDB STARTSIDA
    ================================= */
 
 
 .start-page {
 
-  overflow: hidden;
 
-  background-image: url("../img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+overflow:hidden;
 
-  background-repeat: repeat;
 
-  background-position: top left;
+background-image:url("../img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+
+
+background-repeat:repeat;
+
+
+background-position:top left;
+
 
 }
 
 
-/*
-   Gör endast startsidans PNG större.
-   Övriga sidor påverkas inte.
-*/
+
 
 .start-page .center-image {
 
-  width: 88vw;
 
-  height: auto;
+width:88vw;
 
-  max-width: none;
 
-  max-height: none;
+height:auto;
 
-  display: block;
+
+max-width:none;
+
+
+max-height:none;
+
+
+display:block;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =================================
+   PICTURES PAGE
+   ================================= */
+
+
+.pictures-page {
+
+
+display:block;
+
+
+min-height:100vh;
+
+
+overflow-x:hidden;
+
+
+background-image:url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png');
+
+
+background-size:cover;
+
+
+background-position:center;
+
+
+background-repeat:no-repeat;
+
+
+background-attachment:fixed;
+
+
+}
+
+
+
+
+
+/* TOP IMAGE */
+
+
+.pictures-page .header-image {
+
+
+width:100%;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+margin-top:40px;
+
+
+margin-bottom:60px;
+
+
+}
+
+
+
+
+.pictures-page .header-image img {
+
+
+width:80vw;
+
+
+max-width:1000px;
+
+
+height:auto;
+
+
+}
+
+
+
+
+
+
+
+
+/* GALLERY */
+
+
+.pictures-page .gallery {
+
+
+column-count:4;
+
+
+column-gap:20px;
+
+
+padding:0 8vw 80px;
+
+
+}
+
+
+
+
+.pictures-page .image {
+
+
+break-inside:avoid;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+.pictures-page .image img {
+
+
+width:100%;
+
+
+height:auto;
+
+
+display:block;
+
+
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE GALLERY */
+
+
+@media(max-width:900px){
+
+
+.pictures-page .gallery {
+
+
+column-count:3;
+
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.pictures-page .gallery {
+
+
+column-count:2;
+
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:400px){
+
+
+.pictures-page .gallery {
+
+
+column-count:1;
+
+
+}
+
 
 }
