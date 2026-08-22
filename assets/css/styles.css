@@ -96,13 +96,19 @@ justify-content:center;
 
 align-items:center;
 
+width:100vw;
+
+height:100vh;
+
 overflow:hidden;
 
-background-image:url("../img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+background-image:url("../img/Bakgrund%20(Startsida).png");
 
 background-repeat:repeat;
 
 background-position:top left;
+
+background-size:95px 95px;
 
 }
 
@@ -280,7 +286,7 @@ max-width:1400px;
 
 display:grid;
 
-grid-template-columns:repeat(3, 1fr);
+grid-template-columns:repeat(3,1fr);
 
 gap:30px;
 
@@ -603,7 +609,7 @@ SHOP FONT
 .shop-page .product p,
 .shop-page .product a {
 
-font-family:"Comic Sans MS", "Comic Sans", cursive;
+font-family:"Comic Sans MS","Comic Sans",cursive;
 
 }
 
@@ -669,10 +675,7 @@ max-width:400px;
 
 padding:50px;
 
-font-family:"Comic Sans MS", "Comic Sans", cursive;
-
-
-/* PNG bakom texten */
+font-family:"Comic Sans MS","Comic Sans",cursive;
 
 background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/SHOP%20PRODUKTBESKRIVNING.png");
 
