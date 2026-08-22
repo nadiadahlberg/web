@@ -3,39 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GDB</title>
+  <title>INFO</title>
 
   <link rel="stylesheet" href="assets/css/styles.css">
-
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
-</head>
 
-<body style="
-  margin: 0;
-  min-height: 100vh;
-  background-image: url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/fb911435-dd8c-4aaa-97d9-6aaae40be7d6.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-">
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Förhindrar scrollning */
+    }
+  </style>
 
-<img
-  src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/CONSTRUCT%20TRANSPARENT%20ME%20TAK.png"
-  alt="Construction"
-  draggable="false"
-  style="
-    width: 90vw;
-    height: 90vh;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-  "
->
+  <!-- IMAGE MAP RESIZER -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+  <script>
+    window.onload = function () {
+      imageMapResize();
+    };
+  </script>
 
   <script>
     document.addEventListener("contextmenu", event => event.preventDefault());
     document.addEventListener("dragstart", event => event.preventDefault());
   </script>
+</head>
+
+<body style="
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Infobakgrund.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+">
+
+<!-- MENYBILD -->
+<img
+  src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Infomeny5.png"
+  alt="Min bild"
+  usemap="#image-map"
+  draggable="false"
+  style="
+    width: 95vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  "
+>
+
+<!-- IMAGE MAP -->
+<map name="image-map">
+
+  <area
+        alt="HOME"
+        href="https://gdbsthlm.com/construction"
+        coords="16,161,115,237"
+        shape="rect">
+
+  <area
+        alt="PICTURES"
+        href="https://gdbsthlm.com/pictures"
+        coords="13,301,112,377"
+        shape="rect">
+
+  <area
+        alt="AUDIO"
+        href="https://gdbsthlm.com/audio"
+        coords="7,449,110,528"
+        shape="rect">
+
+  <area
+        alt="VIDEO"
+        href="https://gdbsthlm.com/video"
+        coords="8,606,112,686"
+        shape="rect">
+
+  <area
+        alt="EMAIL"
+        href="mailto:info@gdbsthlm.com"
+        coords="354,435,1024,577"
+        shape="rect">
+
+</map>
 
 </body>
 </html>
