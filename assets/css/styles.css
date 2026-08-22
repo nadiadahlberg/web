@@ -17,14 +17,11 @@ padding:0;
 }
 
 
-
-
 /*
 =================================
 GEMENSAM CSS
 =================================
 */
-
 
 body {
 
@@ -46,7 +43,6 @@ user-select:none;
 }
 
 
-
 a:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -58,7 +54,6 @@ cursor:url("../img/Hover.png"), pointer;
 }
 
 
-
 area {
 
 cursor:url("../img/Hover.png"), pointer;
@@ -66,16 +61,11 @@ cursor:url("../img/Hover.png"), pointer;
 }
 
 
-
-
-
-
 /*
 =================================
 STANDARD IMAGE
 =================================
 */
-
 
 .center-image {
 
@@ -92,17 +82,11 @@ max-height:80vh;
 }
 
 
-
-
-
-
-
 /*
 =================================
 STARTSIDA
 =================================
 */
-
 
 .start-page {
 
@@ -114,7 +98,6 @@ align-items:center;
 
 overflow:hidden;
 
-
 background-image:url("../img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
 
 background-repeat:repeat;
@@ -122,8 +105,6 @@ background-repeat:repeat;
 background-position:top left;
 
 }
-
-
 
 
 .start-page .center-image {
@@ -137,18 +118,11 @@ max-height:none;
 }
 
 
-
-
-
-
-
-
 /*
 =================================
 PICTURES PAGE
 =================================
 */
-
 
 .pictures-page {
 
@@ -158,9 +132,7 @@ min-height:100vh;
 
 overflow-x:hidden;
 
-
 background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/PATTERN%20PICTURES.png");
-
 
 background-size:cover;
 
@@ -173,9 +145,7 @@ background-attachment:fixed;
 }
 
 
-
 .pictures-page .header-image {
-
 
 width:100%;
 
@@ -187,13 +157,10 @@ margin-top:40px;
 
 margin-bottom:60px;
 
-
 }
 
 
-
 .pictures-page .header-image img {
-
 
 width:90vw;
 
@@ -201,14 +168,10 @@ max-width:1200px;
 
 height:auto;
 
-
 }
 
 
-
-
 .pictures-page .gallery {
-
 
 column-count:4;
 
@@ -216,54 +179,36 @@ column-gap:20px;
 
 padding:0 8vw 80px;
 
-
 }
 
 
-
 .pictures-page .image {
-
 
 break-inside:avoid;
 
 margin-bottom:20px;
 
-
 }
 
 
-
 .pictures-page .image img {
-
 
 width:100%;
 
 height:auto;
 
-
 cursor:url("../img/Hover.png"), pointer;
-
 
 transition:transform .2s ease;
 
-
 }
-
 
 
 .pictures-page .image img:hover {
 
-
 transform:scale(1.03);
 
-
 }
-
-
-
-
-
-
 
 
 /*
@@ -272,19 +217,19 @@ VIDEO PAGE
 =================================
 */
 
-
 .video-page {
 
+display:flex;
 
-display:block;
+flex-direction:column;
+
+align-items:center;
 
 min-height:100vh;
 
 overflow-x:hidden;
 
-
 background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEBG.jpg?v=2");
-
 
 background-size:cover;
 
@@ -294,12 +239,76 @@ background-repeat:no-repeat;
 
 background-attachment:fixed;
 
+}
+
+
+/* VIDEO TOP IMAGE */
+
+.video-header {
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+margin-top:40px;
+
+margin-bottom:60px;
 
 }
 
 
+.video-header img {
+
+width:90vw;
+
+max-width:1200px;
+
+height:auto;
+
+}
 
 
+/* VIDEOS */
+
+.videos {
+
+width:100%;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:50px;
+
+padding-bottom:100px;
+
+}
+
+
+.video {
+
+width:800px;
+
+max-width:90vw;
+
+}
+
+
+.video iframe {
+
+display:block;
+
+width:100%;
+
+aspect-ratio:16 / 9;
+
+border:0;
+
+}
 
 
 /*
@@ -308,9 +317,7 @@ SHOP PAGE
 =================================
 */
 
-
 .shop-page {
-
 
 display:block;
 
@@ -318,9 +325,7 @@ min-height:100vh;
 
 overflow-x:hidden;
 
-
 background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/WEBSHOP%20pattern.png");
-
 
 background-size:cover;
 
@@ -330,108 +335,65 @@ background-repeat:no-repeat;
 
 background-attachment:fixed;
 
-
 }
-
-
-
-
 
 
 /* SHOP TOP IMAGE */
 
-
 .shop-header {
-
 
 width:100%;
 
-
 display:flex;
-
 
 justify-content:center;
 
-
 margin-top:40px;
-
 
 margin-bottom:60px;
 
-
 }
-
-
 
 
 .shop-header img {
 
-
 width:60vw;
-
 
 max-width:1200px;
 
-
 height:auto;
 
-
 }
-
-
-
-
-
-
 
 
 /* PRODUCTS */
 
-
 .products {
-
 
 width:100%;
 
-
 display:grid;
-
 
 grid-template-columns:repeat(2,1fr);
 
-
 gap:50px;
-
 
 padding:0 8vw 100px;
 
-
 }
-
-
-
-
 
 
 .product {
 
-
 text-align:center;
-
 
 padding:30px;
 
-
 background:rgba(255,255,255,.15);
-
 
 backdrop-filter:blur(5px);
 
-
 }
-
-
-
 
 
 .product img {
@@ -445,75 +407,46 @@ object-fit:contain;
 }
 
 
-
-
-
-
 .product h2 {
-
 
 margin-top:20px;
 
 font-size:28px;
 
-
 }
 
 
-
-
 .product p {
-
 
 font-size:20px;
 
 margin:15px;
 
-
 }
-
-
 
 
 .product a {
 
-
 display:inline-block;
-
 
 padding:12px 30px;
 
-
 border:2px solid black;
-
 
 text-decoration:none;
 
-
 color:black;
 
-
 }
-
-
 
 
 .product a:hover {
 
-
 background:black;
-
 
 color:white;
 
-
 }
-
-
-
-
-
-
 
 
 /*
@@ -522,17 +455,13 @@ LIGHTBOX
 =================================
 */
 
-
 .lightbox {
-
 
 position:fixed;
 
 inset:0;
 
-
 background:transparent;
-
 
 display:flex;
 
@@ -540,72 +469,48 @@ justify-content:center;
 
 align-items:center;
 
-
 opacity:0;
 
 visibility:hidden;
 
-
 transition:opacity .25s ease;
 
-
 z-index:9999;
-
 
 }
 
 
-
-
 .lightbox.active {
-
 
 opacity:1;
 
 visibility:visible;
 
-
 }
 
 
-
 .lightbox img {
-
 
 max-width:90vw;
 
 max-height:90vh;
 
-
 object-fit:contain;
-
 
 transform:scale(.9);
 
-
 transition:transform .25s ease;
-
 
 box-shadow:0 10px 40px rgba(0,0,0,.25);
 
-
 }
-
 
 
 .lightbox.active img {
 
-
 transform:scale(1);
 
-
 }
-
-
-
-
-
-
 
 
 /*
@@ -614,84 +519,59 @@ RESPONSIVE
 =================================
 */
 
-
 @media(max-width:900px){
-
 
 .pictures-page .gallery {
 
-
 column-count:3;
-
 
 }
 
 
 .products {
 
-
 grid-template-columns:1fr 1fr;
 
-
 }
 
-
 }
-
-
 
 
 @media(max-width:600px){
 
-
 .pictures-page .gallery {
-
 
 column-count:2;
 
-
 }
-
 
 
 .products {
 
-
 grid-template-columns:1fr;
 
-
 }
-
 
 
 .shop-header img {
 
-
 width:90vw;
 
-
 }
 
-
 }
-
-
-
 
 
 @media(max-width:400px){
 
-
 .pictures-page .gallery {
-
 
 column-count:1;
 
+}
 
 }
 
-
-}
 
 /*
 =================================
@@ -707,89 +587,60 @@ font-family:"Comic Sans MS", "Comic Sans", cursive;
 
 }
 
+
 /*
 =================================
 PRODUCT PAGE
 =================================
 */
 
-
 .product-page {
-
 
 min-height:100vh;
 
-
 display:flex;
-
 
 justify-content:center;
 
-
 align-items:center;
-
-
 
 background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/WEBSHOP%20pattern.png");
 
-
 background-size:cover;
-
 
 background-position:center;
 
-
 background-attachment:fixed;
 
-
 }
-
-
 
 
 .product-container {
 
-
 display:flex;
-
 
 align-items:center;
 
-
 justify-content:center;
-
 
 gap:80px;
 
-
 padding:60px;
 
-
 }
-
-
-
 
 
 .product-main-image {
 
-
 width:45vw;
-
 
 max-width:600px;
 
-
 height:600px;
-
 
 object-fit:contain;
 
-
 }
-
-
-
 
 
 .product-info {
@@ -802,6 +653,7 @@ font-family:"Comic Sans MS", "Comic Sans", cursive;
 
 
 /* PNG bakom texten */
+
 background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/SHOP%20PRODUKTBESKRIVNING.png");
 
 background-size:contain;
@@ -810,121 +662,75 @@ background-position:center;
 
 background-repeat:no-repeat;
 
-
 }
-
-
 
 
 .product-info h1 {
 
-
 font-size:40px;
 
-
 }
-
-
-
 
 
 .product-info p {
 
-
 font-size:20px;
-
 
 line-height:1.5;
 
-
 margin:30px 0;
 
-
 }
-
-
-
 
 
 .product-info h2 {
 
-
 font-size:30px;
 
-
 }
-
-
-
 
 
 .product-info a {
 
-
 display:inline-block;
-
 
 padding:12px 30px;
 
-
 border:2px solid black;
-
 
 color:black;
 
-
 text-decoration:none;
-
 
 margin-top:20px;
 
-
 }
-
-
-
 
 
 .product-info a:hover {
 
-
 background:black;
-
 
 color:white;
 
-
 }
-
-
-
-
 
 
 @media(max-width:800px){
 
-
 .product-container {
-
 
 flex-direction:column;
 
-
 }
-
 
 
 .product-main-image {
 
-
 width:80vw;
-
 
 height:auto;
 
-
 }
-
-
 
 }
