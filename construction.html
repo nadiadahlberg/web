@@ -20,9 +20,16 @@
 
 </head>
 
-
 <body class="start-page">
 
+<style>
+  body.start-page {
+    background-image: url("assets/img/d133f034-3f9a-413a-9160-69c4f4279c2f.png");
+    background-repeat: repeat;
+    background-size: 65% auto;
+    background-position: top left;
+  }
+</style>
 
 <img
   class="center-image"
@@ -31,7 +38,6 @@
   usemap="#image-map"
   draggable="false"
 >
-
 
 <map name="image-map">
 
@@ -73,22 +79,18 @@
 
 </map>
 
-
 <script>
   document.addEventListener("contextmenu", event => event.preventDefault());
   document.addEventListener("dragstart", event => event.preventDefault());
 </script>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
 
-
 <script>
-window.addEventListener("load", function () {
-  imageMapResize();
-});
+  window.addEventListener("load", function () {
+    imageMapResize();
+  });
 </script>
-
 
 </body>
 </html>
