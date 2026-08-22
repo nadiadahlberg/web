@@ -274,26 +274,26 @@ height:auto;
 
 .videos {
 
-width:100%;
+width:90%;
 
-display:flex;
+max-width:1400px;
 
-flex-direction:column;
+display:grid;
 
-align-items:center;
+grid-template-columns:repeat(3, 1fr);
 
-gap:50px;
+gap:30px;
 
 padding-bottom:100px;
 
 }
 
 
+/* VIDEO */
+
 .video {
 
-width:800px;
-
-max-width:90vw;
+width:100%;
 
 }
 
@@ -534,6 +534,15 @@ grid-template-columns:1fr 1fr;
 
 }
 
+
+/* VIDEO - TABLET */
+
+.videos {
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
 }
 
 
@@ -556,6 +565,17 @@ grid-template-columns:1fr;
 .shop-header img {
 
 width:90vw;
+
+}
+
+
+/* VIDEO - MOBILE */
+
+.videos {
+
+grid-template-columns:1fr;
+
+width:90%;
 
 }
 
