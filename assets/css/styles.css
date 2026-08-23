@@ -88,6 +88,12 @@ STARTSIDA
 =================================
 */
 
+/*
+1600 x 850 är originalstorleken.
+Bilden blir aldrig större än 1600 x 850.
+På mindre skärmar skalas den ned proportionellt.
+*/
+
 .start-page {
 
 display:flex;
@@ -112,12 +118,6 @@ background-size:95px 95px;
 
 }
 
-
-/*
-1600 x 850 är originalstorleken.
-Bilden får aldrig bli större än originalet.
-På mindre skärmar skalas den ned proportionellt.
-*/
 
 .start-page .center-image {
 
@@ -765,5 +765,53 @@ width:80vw;
 height:auto;
 
 }
+
+}
+
+
+/*
+=================================
+UNDER CONSTRUCTION PAGE
+=================================
+*/
+
+.construction-page {
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:100vw;
+
+height:100vh;
+
+overflow:hidden;
+
+background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Infobakgrund.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+}
+
+
+.construction-image {
+
+display:block;
+
+width:auto;
+
+height:auto;
+
+max-width:95vw;
+
+max-height:95vh;
+
+object-fit:contain;
 
 }
