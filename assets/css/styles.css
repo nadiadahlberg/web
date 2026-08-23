@@ -128,16 +128,6 @@ background-size:clamp(50px, 5.94vw, 95px);
 }
 
 
-/*
-STARTMENY
-
-Originalstorlek:
-1600 x 850 px
-
-Bilden blir aldrig större än originalstorleken.
-På mindre skärmar skalas den ned proportionellt.
-*/
-
 .start-page .center-image {
 
 display:block;
@@ -180,7 +170,19 @@ background-attachment:fixed;
 }
 
 
-.pictures-page .header-image {
+/*
+PICTURES TOP IMAGE
+
+Originalstorlek:
+1366 x 768 px
+
+Bilden blir aldrig större än originalstorleken.
+
+På mindre skärmar skalas den ned
+proportionellt.
+*/
+
+.pictures-header {
 
 width:100%;
 
@@ -188,23 +190,27 @@ display:flex;
 
 justify-content:center;
 
-margin-top:40px;
-
-margin-bottom:60px;
-
 }
 
 
-.pictures-page .header-image img {
+.pictures-header img {
 
-width:90vw;
+display:block;
 
-max-width:1200px;
+width:min(1366px, 100vw, 177.8646vh);
 
 height:auto;
 
+max-width:none;
+
+max-height:none;
+
 }
 
+
+/*
+GALLERY
+*/
 
 .pictures-page .gallery {
 
@@ -284,7 +290,9 @@ Originalstorlek:
 1366 x 768 px
 
 Bilden blir aldrig större än originalstorleken.
-På mindre skärmar skalas den ned proportionellt.
+
+På mindre skärmar skalas den ned
+proportionellt.
 */
 
 .video-header {
@@ -295,10 +303,6 @@ display:flex;
 
 justify-content:center;
 
-margin-top:40px;
-
-margin-bottom:60px;
-
 }
 
 
@@ -306,11 +310,13 @@ margin-bottom:60px;
 
 display:block;
 
-width:min(1366px, 100vw);
+width:min(1366px, 100vw, 177.8646vh);
 
 height:auto;
 
-max-width:1366px;
+max-width:none;
+
+max-height:none;
 
 }
 
