@@ -818,13 +818,7 @@ height:100vh;
 
 overflow:hidden;
 
-background-image:url("https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Infobakgrund.png");
-
-background-size:cover;
-
-background-position:center;
-
-background-repeat:no-repeat;
+background-color:#e0e0c6;
 
 }
 
