@@ -113,11 +113,17 @@ background-size:95px 95px;
 }
 
 
+/*
+1600 x 850 är originalstorleken.
+Bilden får aldrig bli större än originalet.
+På mindre skärmar skalas den ned proportionellt.
+*/
+
 .start-page .center-image {
 
 display:block;
 
-width:min(1600px, 100vw, calc(100vh * 1600 / 850));
+width:min(1600px, 100vw, 188.2353vh);
 
 height:auto;
 
