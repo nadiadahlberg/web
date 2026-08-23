@@ -15,129 +15,114 @@
 </head>
 
 
-
 <body class="video-page">
 
 
-
-<!-- TOP IMAGE -->
+<!-- =================================
+     VIDEO TOP IMAGE
+     ================================= -->
 
 <div class="video-header">
 
-<img
-
-src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEOMENY.png"
-
-draggable="false"
-
-usemap="#image-map"
-
->
+  <img
+    src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/VIDEOMENY.png"
+    alt="Video"
+    draggable="false"
+    usemap="#image-map"
+  >
 
 </div>
 
 
-
-
-
-<!-- IMAGE MAP -->
-
+<!-- =================================
+     IMAGE MAP
+     ================================= -->
 
 <map name="image-map">
 
-
-<area
-
-alt="Home"
-
-href="https://gdbsthlm.com"
-
-coords="19,221,313,277"
-
-shape="rect">
-
+  <area
+    alt="Home"
+    href="https://gdbsthlm.com"
+    coords="19,221,313,277"
+    shape="rect"
+  >
 
 </map>
 
 
-<!-- VIDEOS -->
-
+<!-- =================================
+     VIDEOS
+     ================================= -->
 
 <section class="videos">
 
-<div class="video">
 
-<iframe
+  <div class="video">
 
-src="https://www.youtube.com/embed/3bENWaTxYkY"
+    <iframe
+      src="https://www.youtube.com/embed/3bENWaTxYkY"
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
 
-title="YouTube video"
-
-allowfullscreen>
-
-</iframe>
-
-</div>
+  </div>
 
 
-<div class="video">
+  <div class="video">
 
-<iframe
+    <iframe
+      src="https://www.youtube.com/embed/EdzJNp7YBWo"
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
 
-src="https://www.youtube.com/embed/EdzJNp7YBWo"
-
-title="YouTube video"
-
-allowfullscreen>
-
-</iframe>
-
-</div>
+  </div>
 
 
-<div class="video">
+  <div class="video">
 
-<iframe
+    <iframe
+      src="https://www.youtube.com/embed/b4fx6BjWEqk"
+      title="YouTube video"
+      allowfullscreen>
+    </iframe>
 
-src="https://www.youtube.com/embed/b4fx6BjWEqk"
-
-title="YouTube video"
-
-allowfullscreen>
-
-</iframe>
-
-</div>
+  </div>
 
 
 </section>
 
-<!-- IMAGE MAP RESIZER -->
 
+<!-- =================================
+     IMAGE MAP RESIZER
+     ================================= -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResize.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
 
 <script>
 
+window.addEventListener("load", function () {
 
-window.addEventListener("load", function(){
-
-imageMapResize();
+  imageMapResize();
 
 });
 
 
+document.addEventListener("contextmenu", event => {
 
-document.addEventListener("contextmenu", event => event.preventDefault());
+  event.preventDefault();
 
-document.addEventListener("dragstart", event => event.preventDefault());
+});
 
+
+document.addEventListener("dragstart", event => {
+
+  event.preventDefault();
+
+});
 
 </script>
 
 
-
 </body>
-
 </html>
