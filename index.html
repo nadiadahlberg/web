@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,15 +13,21 @@
 
   <script>
     document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
 
-    document.addEventListener("wheel", e => e.preventDefault(), { passive: false });
-    document.addEventListener("touchmove", e => e.preventDefault(), { passive: false });
+    document.addEventListener("wheel", e => e.preventDefault(), {
+      passive: false
+    });
+
+    document.addEventListener("touchmove", e => e.preventDefault(), {
+      passive: false
+    });
   </script>
 
 </head>
 
+
 <body class="start-page">
+
 
 <img
   class="center-image"
@@ -29,58 +36,77 @@
   draggable="false"
 >
 
+
 <map name="image-map">
 
-  <area 
-    alt="INFO" 
-    href="https://gdbsthlm.com/info" 
-    coords="249,150,96,214" 
+  <area
+    alt="SHOP"
+    href="https://gdbsthlm.com/shop"
+    coords="97,578,282,470"
     shape="rect">
 
-  <area 
-    alt="SHOP" 
-    href="https://gdbsthlm.com/shop" 
-    coords="43,414,206,507" 
+  <area
+    alt="INFO"
+    href="https://gdbsthlm.com/info"
+    coords="326,233,223,165"
     shape="rect">
 
-  <area 
-    alt="AUDIO" 
-    href="https://gdbsthlm.com/audio" 
-    coords="372,333,491,363" 
+  <area
+    alt="AUDIO"
+    href="https://gdbsthlm.com/audio"
+    coords="473,376,611,407"
     shape="rect">
 
-  <area 
-    alt="VIDEO" 
-    href="https://gdbsthlm.com/video" 
-    coords="569,327,684,357" 
+  <area
+    alt="VIDEO"
+    href="https://gdbsthlm.com/video"
+    coords="702,368,832,400"
     shape="rect">
 
-  <area 
-    alt="PICTURES" 
-    href="https://gdbsthlm.com/pictures" 
-    coords="763,345,937,378" 
+  <area
+    alt="PICTURES"
+    href="https://gdbsthlm.com/pictures"
+    coords="927,390,1126,421"
     shape="rect">
 
-  <area 
-    alt="CONTACT" 
-    href="mailto:info@gdbsthlm.com" 
-    coords="541,607,980,647" 
+  <area
+    alt="CONTACT"
+    href="mailto:info@gdbsthlm.com"
+    coords="672,692,1167,726"
     shape="rect">
+
+  <area
+    alt="CONSTRUCTION"
+    href="https://gdbsthlm.com/construction"
+    coords="1351,253,62"
+    shape="circle">
 
 </map>
 
-<script>
-  document.addEventListener("contextmenu", event => event.preventDefault());
-  document.addEventListener("dragstart", event => event.preventDefault());
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
 
 <script>
-  window.addEventListener("load", function () {
-    imageMapResize();
-  });
+
+document.addEventListener("contextmenu", event => event.preventDefault());
+
+document.addEventListener("dragstart", event => event.preventDefault());
+
 </script>
+
+
+<!-- IMAGE MAP RESIZER -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResize.min.js"></script>
+
+<script>
+
+window.addEventListener("load", function () {
+
+  imageMapResize();
+
+});
+
+</script>
+
 
 </body>
 </html>
