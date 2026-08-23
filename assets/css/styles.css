@@ -90,7 +90,9 @@ STARTSIDA
 
 /*
 1600 x 850 är originalstorleken.
+
 Bilden blir aldrig större än 1600 x 850.
+
 På mindre skärmar skalas den ned proportionellt.
 */
 
@@ -114,10 +116,27 @@ background-repeat:repeat;
 
 background-position:top left;
 
-background-size:95px 95px;
+/*
+Patternet är 95 x 95 px original.
+
+Det minskar automatiskt på mindre skärmar,
+men blir aldrig större än 95 x 95 px.
+*/
+
+background-size:clamp(50px, 5.94vw, 95px);
 
 }
 
+
+/*
+STARTMENY
+
+Originalstorlek:
+1600 x 850 px
+
+Bilden blir aldrig större än originalstorleken.
+På mindre skärmar skalas den ned proportionellt.
+*/
 
 .start-page .center-image {
 
@@ -258,7 +277,9 @@ background-attachment:fixed;
 }
 
 
-/* VIDEO TOP IMAGE */
+/*
+VIDEO TOP IMAGE
+*/
 
 .video-header {
 
@@ -286,7 +307,9 @@ height:auto;
 }
 
 
-/* VIDEOS */
+/*
+VIDEOS
+*/
 
 .videos {
 
@@ -304,8 +327,6 @@ padding-bottom:100px;
 
 }
 
-
-/* VIDEO */
 
 .video {
 
@@ -354,7 +375,9 @@ background-attachment:fixed;
 }
 
 
-/* SHOP TOP IMAGE */
+/*
+SHOP TOP IMAGE
+*/
 
 .shop-header {
 
@@ -382,7 +405,9 @@ height:auto;
 }
 
 
-/* PRODUCTS */
+/*
+PRODUCTS
+*/
 
 .products {
 
@@ -551,7 +576,9 @@ grid-template-columns:1fr 1fr;
 }
 
 
-/* VIDEO - TABLET */
+/*
+VIDEO - TABLET
+*/
 
 .videos {
 
@@ -585,7 +612,9 @@ width:90vw;
 }
 
 
-/* VIDEO - MOBILE */
+/*
+VIDEO - MOBILE
+*/
 
 .videos {
 
