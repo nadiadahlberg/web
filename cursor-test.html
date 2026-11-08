@@ -30,6 +30,15 @@
   body.f { cursor: url("assets/img/Muspekare%202.png"), auto; }
   body.f a:hover, body.f button:hover { cursor: url("assets/img/Hover.png"), pointer; }
   body.f area { cursor: url("assets/img/Hover.png"), pointer; }
+
+  /* G: planerad lösning: pekare på sidan + på länkar, men INGEN egen pekare på area */
+  body.g { cursor: url("assets/img/Muspekare%202.png"), auto; }
+  body.g a:hover, body.g button:hover { cursor: url("assets/img/Hover.png"), pointer; }
+
+  /* H: som G, men area får den nedskalade handpekaren (32 px) */
+  body.h { cursor: url("assets/img/Muspekare%202.png"), auto; }
+  body.h a:hover, body.h button:hover { cursor: url("assets/img/Hover.png"), pointer; }
+  body.h area { cursor: url("assets/img/cursor-hover-32.png") 0 0, pointer; }
 </style>
 </head>
 <body>
@@ -41,6 +50,8 @@
   <a href="?v=d">Test D</a>
   <a href="?v=e">Test E</a>
   <a href="?v=f">Test F</a>
+  <a href="?v=g">Test G</a>
+  <a href="?v=h">Test H</a>
 </nav>
 
 <h1 id="title">Välj ett test ovan</h1>
@@ -54,7 +65,7 @@
 </div>
 
 <script>
-  var v = (location.search.match(/v=([a-f])/) || [])[1];
+  var v = (location.search.match(/v=([a-h])/) || [])[1];
   if (v) {
     document.body.className = v;
     document.getElementById("title").textContent = "Test " + v.toUpperCase();
