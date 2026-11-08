@@ -19,6 +19,17 @@
   /* C: båda, nedskalade till max 32 px med hotspot längst upp till vänster */
   body.c .box { cursor: url("assets/img/cursor-main-32.png") 0 0, auto; }
   body.c .box a { cursor: url("assets/img/cursor-hover-32.png") 0 0, pointer; }
+
+  /* D: pekare på hela sidan (body), precis som på riktiga sidan */
+  body.d { cursor: url("assets/img/Muspekare%202.png"), auto; }
+
+  /* E: pekare på klickbara bildytor (area) */
+  body.e area { cursor: url("assets/img/Hover.png"), pointer; }
+
+  /* F: exakt som på riktiga sidan: allt ovan + länkar/knappar */
+  body.f { cursor: url("assets/img/Muspekare%202.png"), auto; }
+  body.f a:hover, body.f button:hover { cursor: url("assets/img/Hover.png"), pointer; }
+  body.f area { cursor: url("assets/img/Hover.png"), pointer; }
 </style>
 </head>
 <body>
@@ -27,6 +38,9 @@
   <a href="?v=a">Test A</a>
   <a href="?v=b">Test B</a>
   <a href="?v=c">Test C</a>
+  <a href="?v=d">Test D</a>
+  <a href="?v=e">Test E</a>
+  <a href="?v=f">Test F</a>
 </nav>
 
 <h1 id="title">Välj ett test ovan</h1>
@@ -34,10 +48,13 @@
 <div class="box">
   <p>Rör musen över den här rutan i ungefär 30 sekunder.</p>
   <p><a href="#" onclick="return false">Rör musen över den här länken också</a></p>
+  <p>Bildyta (klickbar):</p>
+  <img src="assets/img/cursor-main-32.png" width="96" height="123" usemap="#m" alt="test" draggable="false">
+  <map name="m"><area shape="rect" coords="0,0,96,123" href="#" alt="test"></map>
 </div>
 
 <script>
-  var v = (location.search.match(/v=([abc])/) || [])[1];
+  var v = (location.search.match(/v=([a-f])/) || [])[1];
   if (v) {
     document.body.className = v;
     document.getElementById("title").textContent = "Test " + v.toUpperCase();
