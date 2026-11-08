@@ -29,7 +29,7 @@ min-height:100vh;
 
 user-select:none;
 
-cursor:url("../img/Muspekare%202.png"), auto;
+cursor:auto; /* TEST: var cursor:url("../img/Muspekare%202.png"), auto; */
 
 }
 
@@ -49,14 +49,14 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 [role="button"]:hover {
 
-cursor:url("../img/Hover.png"), pointer;
+cursor:pointer; /* TEST: var cursor:url("../img/Hover.png"), pointer; */
 
 }
 
 
 area {
 
-cursor:url("../img/Hover.png"), pointer;
+cursor:pointer; /* TEST: var cursor:url("../img/Hover.png"), pointer; */
 
 }
 
@@ -243,7 +243,7 @@ width:100%;
 
 height:auto;
 
-cursor:url("../img/Hover.png"), pointer;
+cursor:pointer; /* TEST: var cursor:url("../img/Hover.png"), pointer; */
 
 transition:transform .2s ease;
 
