@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Muspekartest</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 30px; background: #eee; }
+  nav a { margin-right: 16px; }
+  .box { margin-top: 24px; height: 320px; background: #fff; border: 2px dashed #888; padding: 16px; }
+
+  /* A: bara vanlig pekare (original, stor) */
+  body.a .box { cursor: url("assets/img/Muspekare%202.png"), auto; }
+
+  /* B: bara hand-pekare på länk (original, stor) */
+  body.b .box a { cursor: url("assets/img/Hover.png"), pointer; }
+
+  /* C: båda, nedskalade till max 32 px med hotspot längst upp till vänster */
+  body.c .box { cursor: url("assets/img/cursor-main-32.png") 0 0, auto; }
+  body.c .box a { cursor: url("assets/img/cursor-hover-32.png") 0 0, pointer; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="?v=a">Test A</a>
+  <a href="?v=b">Test B</a>
+  <a href="?v=c">Test C</a>
+</nav>
+
+<h1 id="title">Välj ett test ovan</h1>
+
+<div class="box">
+  <p>Rör musen över den här rutan i ungefär 30 sekunder.</p>
+  <p><a href="#" onclick="return false">Rör musen över den här länken också</a></p>
+</div>
+
+<script>
+  var v = (location.search.match(/v=([abc])/) || [])[1];
+  if (v) {
+    document.body.className = v;
+    document.getElementById("title").textContent = "Test " + v.toUpperCase();
+  }
+</script>
+
+</body>
+</html>
