@@ -52,7 +52,8 @@ body {
 
 .audio-image {
 
-  width:80vw;
+  /* 80 % av bredden, men aldrig högre än 80 % av fönstret (bilden är 1366 x 768) */
+  width:min(80vw, 142.29vh);
 
   height:auto;
 
@@ -78,7 +79,7 @@ body {
 
 class="audio-image"
 
-src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/AUDIO.png"
+src="assets/img/AUDIO.png"
 
 alt="AUDIO"
 

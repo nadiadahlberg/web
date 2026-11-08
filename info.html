@@ -36,7 +36,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: url('https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Infobakgrund.png');
+  background-image: url('assets/img/Infobakgrund.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,11 +44,11 @@
 
 <!-- MENYBILD -->
 <img
-  src="https://raw.githubusercontent.com/nadiadahlberg/web/refs/heads/main/assets/img/Infomeny5.png"
+  src="assets/img/Infomeny5.png"
   usemap="#image-map"
   draggable="false"
   style="
-    width: 95vw;
+    width: min(95vw, 168.97vh); /* bilden är 1800 x 1012, ska aldrig bli högre än fönstret */
     height: auto;
     position: absolute;
     top: 50%;
