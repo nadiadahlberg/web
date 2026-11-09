@@ -528,7 +528,9 @@ width:100%;
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fit, minmax(200px, 260px));
+
+justify-content:center;
 
 gap:50px;
 
@@ -670,13 +672,6 @@ column-count:3;
 }
 
 
-.products {
-
-grid-template-columns:1fr 1fr;
-
-}
-
-
 /*
 VIDEO - TABLET
 */
@@ -695,13 +690,6 @@ grid-template-columns:repeat(2,1fr);
 .pictures-page .gallery {
 
 column-count:2;
-
-}
-
-
-.products {
-
-grid-template-columns:1fr;
 
 }
 
