@@ -945,6 +945,151 @@ color:white;
 }
 
 
+/*
+BILDSPELARE (produktsida med flera bilder)
+*/
+
+.slider {
+
+position:relative;
+
+height:min(600px, 70vh);
+
+aspect-ratio:614 / 864;
+
+flex-shrink:0;
+
+}
+
+
+.slider .slides {
+
+position:absolute;
+
+inset:0;
+
+}
+
+
+.slider .slide {
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:contain;
+
+opacity:0;
+
+transition:opacity .3s ease;
+
+}
+
+
+.slider .slide.active {
+
+opacity:1;
+
+}
+
+
+.slider-arrow {
+
+position:absolute;
+
+top:50%;
+
+width:44px;
+
+height:44px;
+
+margin-top:-22px;
+
+border-radius:50%;
+
+background:rgba(0,0,0,.65);
+
+color:#fff;
+
+font-size:30px;
+
+line-height:40px;
+
+text-align:center;
+
+text-decoration:none;
+
+user-select:none;
+
+}
+
+
+.slider-arrow:hover {
+
+background:#000;
+
+}
+
+
+.slider-prev {
+
+left:-22px;
+
+}
+
+
+.slider-next {
+
+right:-22px;
+
+}
+
+
+.slider-dots {
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:-30px;
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+}
+
+
+.slider-dot {
+
+display:block;
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.5);
+
+}
+
+
+.slider-dot.active {
+
+background:#fff;
+
+}
+
+
 @media(max-width:800px){
 
 .product-container {
@@ -959,6 +1104,27 @@ flex-direction:column;
 width:80vw;
 
 height:auto;
+
+}
+
+
+.slider {
+
+height:min(70vh, 110vw);
+
+}
+
+
+.slider-prev {
+
+left:8px;
+
+}
+
+
+.slider-next {
+
+right:8px;
 
 }
 
