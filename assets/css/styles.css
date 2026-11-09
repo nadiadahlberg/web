@@ -54,7 +54,7 @@ cursor:url("../img/Hover.png"), pointer;
 }
 
 
-/* OBS: ingen egen cursor-bild på <area>, det kraschar Chrome. */
+/* OBS: ingen egen cursor-bild på <area>, det kraschar Chrome. Bildytorna görs i stället om till <a>-länkar av assets/js/hotspots.js, så de får handpekaren via a:hover ovan. */
 
 
 /*
