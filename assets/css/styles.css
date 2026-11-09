@@ -541,7 +541,7 @@ padding:0 8vw 100px;
 
 text-align:center;
 
-padding:30px;
+padding:15px;
 
 background:transparent;
 
@@ -550,11 +550,16 @@ backdrop-filter:none;
 }
 
 
+/* Alla produktbilder får exakt samma ruta (samma proportioner som magasinets omslag) */
 .product img {
+
+display:block;
 
 width:100%;
 
-height:450px;
+height:auto;
+
+aspect-ratio:614 / 864;
 
 object-fit:contain;
 
@@ -581,39 +586,7 @@ margin:15px;
 
 .product a {
 
-display:inline-block;
-
-padding:12px 30px;
-
-border:2px solid black;
-
-text-decoration:none;
-
-color:black;
-
-}
-
-
-.product a:hover {
-
-background:black;
-
-color:white;
-
-}
-
-
-/* Bilden som länk: ingen ram eller svart bakgrund som på knapparna */
-.product a.product-image-link,
-.product a.product-image-link:hover {
-
 display:block;
-
-padding:0;
-
-border:0;
-
-background:transparent;
 
 }
 
@@ -830,13 +803,16 @@ padding:60px;
 }
 
 
+/* Samma ruta för huvudbilden och bildspelet på alla produktsidor */
 .product-main-image {
 
-width:45vw;
+height:min(600px, 70vh);
 
-max-width:600px;
+width:auto;
 
-height:600px;
+aspect-ratio:614 / 864;
+
+flex-shrink:0;
 
 object-fit:contain;
 
@@ -1099,15 +1075,7 @@ flex-direction:column;
 }
 
 
-.product-main-image {
-
-width:80vw;
-
-height:auto;
-
-}
-
-
+.product-main-image,
 .slider {
 
 height:min(70vh, 110vw);
