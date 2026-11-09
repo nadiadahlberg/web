@@ -828,19 +828,37 @@ object-fit:contain;
 }
 
 
+/*
+Textrutan har samma proportioner som bakgrundsbilden (1666 x 2433 px).
+All storlek räknas från --w (rutans bredd), så texten alltid ryms inom
+den vita ytan på pappret, oavsett skärmstorlek.
+Vit yta i bilden: 23,5 % från vänster, 21,5 % från höger,
+18 % från toppen och 27,5 % från botten.
+*/
+
 .product-info {
 
-max-width:400px;
+--w:min(480px, 90vw, 58vh);
 
-padding:50px;
+width:var(--w);
+
+aspect-ratio:1666 / 2433;
+
+padding:calc(var(--w) * .18) calc(var(--w) * .215) calc(var(--w) * .275) calc(var(--w) * .235);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+overflow:hidden;
 
 font-family:"Comic Sans MS","Comic Sans",cursive;
 
 background-image:url("../../assets/img/SHOP%20PRODUKTBESKRIVNING.png");
 
-background-size:contain;
-
-background-position:center;
+background-size:100% 100%;
 
 background-repeat:no-repeat;
 
@@ -849,51 +867,31 @@ background-repeat:no-repeat;
 
 .product-info h1 {
 
-font-size:40px;
+font-size:calc(var(--w) * .07);
+
+line-height:1.15;
+
+overflow-wrap:break-word;
 
 }
 
 
 .product-info p {
 
-font-size:20px;
+font-size:calc(var(--w) * .04);
 
-line-height:1.5;
+line-height:1.4;
 
-margin:30px 0;
+margin:calc(var(--w) * .04) 0;
+
+overflow-wrap:break-word;
 
 }
 
 
 .product-info h2 {
 
-font-size:30px;
-
-}
-
-
-.product-info a {
-
-display:inline-block;
-
-padding:12px 30px;
-
-border:2px solid black;
-
-color:black;
-
-text-decoration:none;
-
-margin-top:20px;
-
-}
-
-
-.product-info a:hover {
-
-background:black;
-
-color:white;
+font-size:calc(var(--w) * .06);
 
 }
 
