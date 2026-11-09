@@ -166,9 +166,9 @@ if(lightbox && lightboxImg && galleryImages.length > 0){
 
 
 
-        img.addEventListener("click", () => {
+        img.addEventListener("click", (event) => {
 
-
+            event.preventDefault();
 
             lightboxImg.src = img.src;
 
