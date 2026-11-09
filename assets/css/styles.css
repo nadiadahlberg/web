@@ -603,6 +603,21 @@ color:white;
 }
 
 
+/* Bilden som länk: ingen ram eller svart bakgrund som på knapparna */
+.product a.product-image-link,
+.product a.product-image-link:hover {
+
+display:block;
+
+padding:0;
+
+border:0;
+
+background:transparent;
+
+}
+
+
 /*
 =================================
 LIGHTBOX
