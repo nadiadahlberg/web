@@ -29,7 +29,7 @@ min-height:100vh;
 
 user-select:none;
 
-cursor:auto; /* TEST: var cursor:url("../img/Muspekare%202.png"), auto; */
+cursor:url("../img/Muspekare%202.png"), auto;
 
 }
 
@@ -49,16 +49,12 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 [role="button"]:hover {
 
-cursor:pointer; /* TEST: var cursor:url("../img/Hover.png"), pointer; */
+cursor:url("../img/Hover.png"), pointer;
 
 }
 
 
-area {
-
-cursor:pointer; /* TEST: var cursor:url("../img/Hover.png"), pointer; */
-
-}
+/* OBS: ingen egen cursor-bild på <area>, det kraschar Chrome. */
 
 
 /*
@@ -243,7 +239,7 @@ width:100%;
 
 height:auto;
 
-cursor:pointer; /* TEST: var cursor:url("../img/Hover.png"), pointer; */
+cursor:pointer;
 
 transition:transform .2s ease;
 
