@@ -44,7 +44,6 @@
       var a = document.createElement("a");
       a.href = area.getAttribute("href") || "#";
       a.setAttribute("aria-label", area.getAttribute("alt") || "");
-      a.title = area.getAttribute("alt") || "";
       a.draggable = false;
       a.style.cssText = "position:absolute;display:block;" + (box.round ? "border-radius:50%;" : "");
       layer.appendChild(a);

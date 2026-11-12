@@ -8,7 +8,7 @@ document.querySelectorAll(".video-facade").forEach(function (a) {
     event.preventDefault();
     var iframe = document.createElement("iframe");
     iframe.src = "https://www.youtube.com/embed/" + a.dataset.id + "?autoplay=1";
-    iframe.title = "YouTube video";
+    iframe.setAttribute("aria-label", "YouTube video");
     iframe.allow = "autoplay; fullscreen; picture-in-picture";
     iframe.allowFullscreen = true;
     a.replaceWith(iframe);
